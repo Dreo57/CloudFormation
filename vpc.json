@@ -8,7 +8,7 @@
       "VpcCidr": {
         "Description": " VPC Cidr Block",
         "Type": "String",
-        "Default":  "17.0.0.0/16"
+        "Default":  "150.0.0.0/16"
       }
       },
 
