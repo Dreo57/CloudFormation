@@ -175,6 +175,32 @@
           "GatewayId": { "Ref": "PracGW" }
         }
       },
+      "S3GatewayEndpoint": {
+        "Type": "AWS::EC2::VPCEndpoint",
+        "Properties": {
+          "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": [
+                  "s3:GetObject"
+                ],
+                "Resource": [
+                  "arn:aws:s3:::examplebucket/*"
+                ]
+              }
+            ]
+          },
+          "ServiceName": {
+            "Fn::Sub": "com.amazonaws.${AWS::Region}.s3"
+          },
+          "VpcId": {
+            "Ref": "PracVpc"
+          }
+        }
+      },
 #     "PracEIP": {
 #       "Type": "AWS::EC2::EIP",
 #       "Properties": {
