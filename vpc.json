@@ -59,7 +59,7 @@
         "Type": "AWS::EC2::VPC",
         "Properties": {
           "CidrBlock": { "Ref": "VpcCidr" },
-          "Tags": [{ "Key": "Name", "Value":  "Test" }]
+          "Tags": [{ "Key": "Name", "Value":  "Dreonet" }]
         }
       },
       "PracSub": {
